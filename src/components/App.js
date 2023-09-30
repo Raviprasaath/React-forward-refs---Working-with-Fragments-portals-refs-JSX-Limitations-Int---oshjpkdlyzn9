@@ -1,9 +1,21 @@
 import React ,{useRef,useState,useEffect} from 'react'
 import '../styles/App.css';
 import InputField from './InputField.js';
+
 const App = () => {
  
-//code here 
+  const inputRef = useRef(); 
+  const textareaRef = useRef(); 
+  const [values, setValues] = useState('');
+
+   const settingValue = () => {
+    const inputValue = inputRef.current.value;
+    setValues(inputValue);
+  };
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
 
 
  
